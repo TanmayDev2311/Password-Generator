@@ -47,6 +47,10 @@ class Password {
         return pass
     }
 }
-// console.log(getCap(), getSmall(), getSpecial())
-let final = Password.generate()
-console.log(final)
+
+let btn = document.getElementById("generate")
+btn.addEventListener("click", () => {
+    let final = Password.generate()
+    document.querySelector(".dialog").innerHTML = final
+}
+)
